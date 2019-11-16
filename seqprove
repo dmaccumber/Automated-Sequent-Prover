@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+import sys
+from solve import *
+import parser 
+
+# retrieve sequent from command line input
+try:
+    input_sequent = sys.argv[1]
+except:
+    print("Error: Must provide an input")
+    input_sequent = input("Enter sequent here in the form [<formulae>] seq [<formulae>]: ")
+
+# split sequent into two side
+seq_split = input_sequent.split(" seq ")
+
+# parse each side of sequent and create instance of Sequent
+parsed = list(map(parser.fully_parsed, seq_split))
+seq_formatted = parser.Sequent(parsed[0], parsed[1])
+
+# prove the sequent
+solve(seq_formatted)
