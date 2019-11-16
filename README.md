@@ -39,8 +39,11 @@ P6b Rule ↔⊢: If φ, ψ, λ, ρ ⊢ π and λ, ρ ⊢ π, φ, ψ, then λ, φ
 
 
 ## Input
-The input will consist of a single sequent on the command line. Sequents will be written as:
-[List of Formulae] seq [List of Formulae]. To construct formulae, atoms can be any string of characters (without space) and connectives as follows:
+The input consists of a single sequent on the command line. Sequents are written as:
+
+[List of Formulae] seq [List of Formulae]. 
+
+To construct formulae, atoms can be any string of characters (without space) and connectives as follows:
 
 • ¬: neg 
 
@@ -53,6 +56,7 @@ The input will consist of a single sequent on the command line. Sequents will be
 • ↔: iff
 
 So, for example, the sequent p→q, ¬r→¬q ⊢ p→r would be written as: [p imp q, (neg r) imp (neg q)] seq [p imp r]
+
 The program is called seqprove and run as follows: 
 ```
 ./seqprove ’Sequent’
