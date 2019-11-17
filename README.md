@@ -29,7 +29,7 @@ P4a Rule ⊢∨: If ζ ⊢ λ, φ, ψ, ρ, then ζ ⊢ λ, φ∨ψ, ρ
 
 P4b Rule ∨⊢: If λ, φ, ρ ⊢ π and λ, ψ, ρ ⊢ π, then λ, φ∨ψ, ρ ⊢ π
 
-P5a Rule ⊢→: If ζ, φ ⊢ λ, ψ, ρ, then ζ⊢λ, φ→ψ, ρ
+P5a Rule ⊢→: If ζ, φ ⊢ λ, ψ, ρ, then ζ ⊢ λ, φ→ψ, ρ
 
 P5b Rule →⊢: If λ, ψ,  ρ ⊢ π and λ, ρ ⊢ π, φ, then λ, φ→ψ, ρ ⊢ π
 
