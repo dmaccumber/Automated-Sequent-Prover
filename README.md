@@ -66,7 +66,7 @@ For example
   ./seqprove ’[p imp q, (neg r) imp (neg q)] seq [p imp r]’
 ```
 ## Output
-The output consists of the proof for the given sequent if it is determined to be true. For example, the sequent above would return the proof:
+The output consists of the proof for the given sequent if it is determined to be true, i.e. when the left-hand-side is true, the right-hand-side must also be true. Each proof consists of a successive application of rules to initial, trivial sequents that satisify rule 1. The third column of the proof shows what rule is used and to what line(s) it is applied to (e.g. Rule 5b combines two sequents to form another).
 
 ### Example 1
 ```
