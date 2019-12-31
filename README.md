@@ -10,7 +10,7 @@ Wang’s idea is based around the notion of a sequent (this idea had been introd
 
 To prove whether a given sequent is true all you need to do is start from some basic sequents and successively apply a series of rules that transform sequents until you end up with the sequent you desire. This process is detailed below.
 
-Additionally, determining whether a formula φ is a theorem, is equivalent to determining whether the sequent ∅ ⊢ φ is true (e.g., ⊢ ¬φ ∨ φ).
+Additionally, determining whether a formula φ is a theorem, is equivalent to determining whether the sequent ∅ ⊢ φ is true (e.g. ⊢ ¬φ ∨ φ).
 
 ### Rules
 P1 Initial Rule: If λ, ζ are strings of atomic formulae, then λ ⊢ ζ is a theorem if some atomic formula occurs on both side of the sequent ⊢.
