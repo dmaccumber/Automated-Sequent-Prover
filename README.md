@@ -67,6 +67,27 @@ For example
 ```
 ## Output
 The output consists of the proof for the given sequent if it is determined to be true, i.e. it is a theorem. For example, the sequent above would return the proof:
+
+### Example 1
+```
+./seqprove '[neg (p or q)] seq [neg p]'
+```
+```
+-----------------------------------------------------
+Input: ¬(p ∨ q) ⊢ ¬p
+-----------------------------------------------------
+1.  p ⊢ p, q       Rule 1                    
+2.  p ⊢ (p ∨ q)    Rule 4a applied to line 1 
+3.  p, ¬(p ∨ q) ⊢  Rule 2b applied to line 2 
+4.  ¬(p ∨ q) ⊢ ¬p  Rule 2a applied to line 3 
+QED
+-----------------------------------------------------
+```
+
+### Example 2
+```
+./seqprove '[p imp q, (neg r) imp (neg q)] seq [p imp r]'
+```
 ```
 -----------------------------------------------------
 Input: (p → q), (¬r → ¬q) ⊢ (p → r)
