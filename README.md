@@ -68,21 +68,21 @@ For example
 ## Output
 The output consists of the proof for the given sequent if it is determined to be true, i.e. it is a theorem. For example, the sequent above would return the proof:
 ```
--------------------------------------------------------------------
+-----------------------------------------------------
 Input: (p → q), (¬r → ¬q) ⊢ (p → r)
--------------------------------------------------------------------
-1.                            r, p ⊢ p, r                   Rule 1                        
-2.                            p ⊢ ¬r, p, r                  Rule 2a                       
-3.                            p ⊢ q, p, r                   Rule 1                        
-4.                            p, ¬q ⊢ p, r                  Rule 2b                       
-5.                            p, (¬r → ¬q) ⊢ p, r           Rule 5b                       
-6.                            r, p, q ⊢ r                   Rule 1                        
-7.                            p, q ⊢ ¬r, r                  Rule 2a                       
-8.                            p, q ⊢ q, r                   Rule 1                        
-9.                            p, q, ¬q ⊢ r                  Rule 2b                       
-10.                           p, q, (¬r → ¬q) ⊢ r           Rule 5b                       
-11.                           p, (p → q), (¬r → ¬q) ⊢ r     Rule 5b                       
-12.                           (p → q), (¬r → ¬q) ⊢ (p → r)  Rule 5a                       
+-----------------------------------------------------
+1.   r, p ⊢ p, r                  Rule 1                            
+2.   p ⊢ ¬r, p, r                 Rule 2a applied to line 1         
+3.   p ⊢ q, p, r                  Rule 1                            
+4.   p, ¬q ⊢ p, r                 Rule 2b applied to line 3         
+5.   p, (¬r → ¬q) ⊢ p, r          Rule 5b applied to lines 2 and 4  
+6.   r, p, q ⊢ r                  Rule 1                            
+7.   p, q ⊢ ¬r, r                 Rule 2a applied to line 6         
+8.   p, q ⊢ q, r                  Rule 1                            
+9.   p, q, ¬q ⊢ r                 Rule 2b applied to line 8         
+10.  p, q, (¬r → ¬q) ⊢ r          Rule 5b applied to lines 7 and 9  
+11.  p, (p → q), (¬r → ¬q) ⊢ r    Rule 5b applied to lines 5 and 10 
+12.  (p → q), (¬r → ¬q) ⊢ (p → r) Rule 5a applied to line 11        
 QED
--------------------------------------------------------------------
+-----------------------------------------------------
 ```
