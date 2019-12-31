@@ -119,3 +119,22 @@ Input: (p ∨ q) ⊢ (p ∧ ¬q)
 SEQUENT DOES NOT HOLD
 -----------------------------------------------------
 ```
+
+### Example 4
+```
+./seqprove '[] seq [((neg p) and (neg q)) imp (p iff q)]'
+```
+```
+-----------------------------------------------------
+Input:  ⊢ ((¬p ∧ ¬q) → (p ↔ q))
+-----------------------------------------------------
+1.  q ⊢ q, p, p              Rule 1                           
+2.  p ⊢ q, p, q              Rule 1                           
+3.   ⊢ q, p, (p ↔ q)         Rule 6a applied to lines 1 and 2 
+4.  ¬q ⊢ p, (p ↔ q)          Rule 2b applied to line 3        
+5.  ¬p, ¬q ⊢ (p ↔ q)         Rule 2b applied to line 4        
+6.  (¬p ∧ ¬q) ⊢ (p ↔ q)      Rule 3b applied to line 5        
+7.   ⊢ ((¬p ∧ ¬q) → (p ↔ q)) Rule 5a applied to line 6        
+QED
+-----------------------------------------------------
+```
