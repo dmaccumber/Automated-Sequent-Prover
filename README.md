@@ -1,4 +1,4 @@
-# Automated-Sequent-Prover
+# Automated-Theorem-Prover
 
 This project was created as a solution to a question in one my assignments from COMP4418 - Knowledge Representation and Reasoning, a course I took at the University of New South Wales during my time studying abroad in Sydney, Australia in 2019.
 
