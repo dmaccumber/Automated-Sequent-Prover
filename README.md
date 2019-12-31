@@ -66,7 +66,7 @@ For example
   ./seqprove ’[p imp q, (neg r) imp (neg q)] seq [p imp r]’
 ```
 ## Output
-The output consists of the proof for the given sequent if it is determined to be true, i.e. it is a theorem. For example, the sequent above would return the proof:
+The output consists of the proof for the given sequent if it is determined to be true. For example, the sequent above would return the proof:
 
 ### Example 1
 ```
