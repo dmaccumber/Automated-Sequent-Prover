@@ -1,0 +1,13 @@
+Example Sequents
+
+(i) ‘[] seq [(neg p) or p]’
+(ii) ‘[neg (p or q)] seq [neg p]’
+(iii) ‘[p] seq [q imp p]’
+(iv) ‘[p] seq [p or q]’
+(v) ‘[(p and q) and r] seq [p and (q and r)]’
+(vi) ‘[p iff q] seq [neg (p iff (neg q))]’
+(vii) ‘[p iff q] seq [(q iff r) imp (p iff r)]’
+(viii) ‘[] seq [((neg p) and (neg q)) imp (p iff q)]’
+(ix) ‘[p iff q] seq [(p and q) or ((neg p) and (neg q))]’
+(x) ‘[p imp q, (neg r) imp (neg q)] seq [p imp r]’
+(xi) ‘[p iff q, (neg r) imp (neg q)] seq [(p imp (r iff q)) or neg(p and (q imp r))]’
